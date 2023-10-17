@@ -7,31 +7,55 @@
     <title>Budget Tracker</title>
   </head>
   <body>
+    <script src="./budget.js"></script>
     <section class="Heading">
       <div class="Title">
         <h1>Budget Tracker</h1>
       </div>
     </section>
     <section class="Income">
-      <section class="Section1">
+      <section id="Section1" class="Section1">
         <h2>Income</h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-          tempore nostrum temporibus et voluptas facilis vero rem optio
-          voluptate molestiae commodi consequatur magnam, non, laudantium eos
-          laborum dolorem. Eveniet, magnam?
-        </p>
-        <button class="button">Source of Income</button>
-        <button class="button">Income amount</button>
+        <form class="form" action="" method="post">
+          <label for="Income">How much do you earn per month?</label>
+          <input
+            type="number"
+            name="Income"
+            placeholder="Enter your income amount"
+          />
+        </form>
       </section>
       <section class="Section2">
-        <h2>Expense</h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-          tempore nostrum temporibus et voluptas facilis vero rem optio
-          voluptate molestiae commodi consequatur magnam, non, laudantium eos
-          laborum dolorem. Eveniet, magnam?
-        </p>
+        <form class="form" action="" method="post">
+          <h2>Expenses</h2>
+          <label for="Rent">Rent</label>
+          <input
+            type="number"
+            name="Rent"
+            placeholder="Enter your rent expense"
+          />
+          <label for="Food">Food</label>
+          <input
+            type="number"
+            name="Food"
+            placeholder="Enter your Food expense"
+          />
+          <label for="Utility">Utility</label>
+          <input
+            type="number"
+            name="Utility"
+            placeholder="Enter your Utility expense"
+          />
+          <label for="Transportation">Transportation</label>
+          <input
+            type="number"
+            name="Transportation"
+            placeholder="Enter your Transportation expense"
+          />
+        </form>
+        <button class="Button" onclick="createFormElement('name', 'value')">
+          Other Expenses
+        </button>
       </section>
     </section>
     <section class="Graphs">
