@@ -19,21 +19,30 @@ const utilityExpense = document.querySelector('input[name"Utility"]');
 const utility = utilityExpense.value;
 
 // A function to add a form for other expenses
-const form = document.querySelector('expenseform');
-const addExpenseButton = document.querySelector('#add-expense-button');
 
-addExpenseButton.addEventListener('click', function(){
-    const expenseName = prompt('Enter the expense name: ');
-    const expenseValue = prompt('Enter the expense value: ');
-    const expenseInput = document.createElement('input');
+const dropdownButton = document.querySelector('#dropdown-button');
+const expenseForm = document.querySelector('#expense-form');
 
-    expenseInput.type = 'number';
-    expenseInput.name = expenseName;
-    expenseInput.value = expenseValue;
+dropdownButton.addEventListener('click', function(){
+    const expenseName = expenseForm.querySelector('input[name="other expense"]').value;
+    const expenseValue = expenseForm.querySelector('input[name="value"]').value;
+    expenseForm.style.display = 'block';
+});
 
-    form.appendChild(expenseInput);
+expenseForm.addEventListener('submit', function(event){
+    event.preventDefault();
+
+const expenseInput = document.createElement('input');
+
+expenseInput.type = 'number';
+expenseInput.name = expenseName;
+expenseInput.value = expenseValue;
+
+document.querySelector('form.form').appendchild(expenseInput);
+
+expenseForm.style.display = 'none';
 })
 
 // Total expense
 
-// const Totalexpense = rent + food + transport + utility + formElement.value
+const Totalexpense = rent + food + transport + utility + expenseValue;

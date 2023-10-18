@@ -53,7 +53,22 @@
             placeholder="Enter your Transportation expense"
           />
         </form>
-        <button id="add-expense-button" class="Button">Add expense</button>
+        <button type="button" id="dropdown-button" class="Button">
+          Add expense
+        </button>
+        <form id="expense-form" style="display: none">
+          <input
+            type="text"
+            name="Other expense"
+            placeholder="Enter the expense name"
+          />
+          <input
+            type="number"
+            name="value"
+            placeholder="Enter the expense amount"
+          />
+          <button type="submit">Add Expense</button>
+        </form>
       </section>
     </section>
     <section class="Graphs">

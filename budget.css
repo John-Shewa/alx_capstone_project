@@ -86,3 +86,19 @@ h2 {
     font-style: normal;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+  @media (max-width: 576px) {
+    .Section2 {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .Section1 {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+    }
+  }
