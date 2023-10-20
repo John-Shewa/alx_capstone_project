@@ -7,7 +7,6 @@
     <title>Budget Tracker</title>
   </head>
   <body>
-    <script src="./budget.js"></script>
     <section class="Heading">
       <div class="Title">
         <h1>Budget Tracker</h1>
@@ -28,38 +27,47 @@
       <section class="Section2">
         <form id="expenseform" class="form" action="" method="post">
           <h2>Expenses</h2>
+          <div id="expense">
           <label for="Rent">Rent</label>
           <input
             type="number"
             name="Rent"
             placeholder="Enter your rent expense"
           />
+        </div>
+        <div id="food">
           <label for="Food">Food</label>
           <input
             type="number"
             name="Food"
             placeholder="Enter your Food expense"
           />
+        </div>
+        <div id="utility">
           <label for="Utility">Utility</label>
           <input
             type="number"
             name="Utility"
             placeholder="Enter your Utility expense"
           />
+        </div>
+        <div id="transport">
           <label for="Transportation">Transportation</label>
           <input
             type="number"
             name="Transportation"
             placeholder="Enter your Transportation expense"
           />
+          </div>
         </form>
+      </div>
         <button type="button" id="dropdown-button" class="Button">
           Add expense
         </button>
         <form id="expense-form" style="display: none">
           <input
             type="text"
-            name="Other expense"
+            name="Other-expense"
             placeholder="Enter the expense name"
           />
           <input
@@ -67,12 +75,13 @@
             name="value"
             placeholder="Enter the expense amount"
           />
-          <button type="submit">Add Expense</button>
+          <button type="submit">Submit</button>
         </form>
       </section>
     </section>
-    <section class="Graphs">
-      <h2>Graphical Representation</h2>
+    <section id="graph-section" class="Graphs">
+      <h2>Budget Utilization</h2>
     </section>
+    <script src="./budget.js"></script>
   </body>
 </html>
